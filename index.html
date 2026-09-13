@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#15111d">
+  <meta name="generator" content="Maya protected build">
+  <meta name="description" content="El universo musical y personal de Maya en xat.">
+  <title>Maya · 109865673</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2315111d'/%3E%3Cpath d='M14 46V18l18 18 18-18v28' fill='none' stroke='%23ff5abf' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='14' r='4' fill='%23a875ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/styles.min.css?v=maya-v2-6-20260913">
+</head>
+<body>
+  <canvas class="sky-canvas" id="skyCanvas" aria-hidden="true"></canvas>
+  <div class="ambient-world" id="ambientWorld" aria-hidden="true"></div>
+
+  <section class="entry-gate" id="entryGate" aria-labelledby="entryName">
+    <div class="entry-effects" id="entryEffects" aria-hidden="true"></div>
+    <button class="motion-switch motion-switch--gate" id="gateMotionButton" type="button" aria-pressed="false">
+      <span aria-hidden="true">✦</span><span>Detener movimiento</span>
+    </button>
+
+    <article class="entry-card">
+      <div class="entry-portrait-wrap">
+        <img id="entryImage" class="entry-portrait" src="assets/images/portada-maya.webp" alt="Portada de Maya" width="1000" height="1000">
+      </div>
+      <div class="entry-identity">
+        <p class="entry-eyebrow">ESCORPIÓN</p>
+        <h1 id="entryName">Maya</h1>
+        <svg class="entry-constellation" viewBox="0 0 390 185" role="img" aria-labelledby="entryScorpioTitle entryScorpioDescription">
+          <title id="entryScorpioTitle">Constelación de Escorpión con sus estrellas principales</title>
+          <desc id="entryScorpioDescription">Trazado de Escorpión con Acrab, Dschubba, Antares, Alniyat, Larawag, Sargas, Shaula y Lesath.</desc>
+          <g class="constellation-lines">
+            <path d="M25 72 75 84 116 70 178 98 220 117 258 134 291 153 334 158 366 138" />
+            <path d="M75 84 57 40 M116 70 102 28 M178 98 145 128" />
+          </g>
+          <g class="constellation-stars">
+            <circle class="star" style="--delay:-.2s" cx="25" cy="72" r="4"/>
+            <circle class="star" style="--delay:-1.1s" cx="57" cy="40" r="4.5"/>
+            <circle class="star" style="--delay:-.7s" cx="75" cy="84" r="6"/>
+            <circle class="star" style="--delay:-1.8s" cx="102" cy="28" r="4"/>
+            <circle class="star" style="--delay:-.4s" cx="116" cy="70" r="5"/>
+            <circle class="star star--heart" style="--delay:-1.4s" cx="178" cy="98" r="8"/>
+            <circle class="star" style="--delay:-.9s" cx="145" cy="128" r="4"/>
+            <circle class="star" style="--delay:-2s" cx="220" cy="117" r="4.5"/>
+            <circle class="star" style="--delay:-.5s" cx="258" cy="134" r="5"/>
+            <circle class="star" style="--delay:-1.6s" cx="291" cy="153" r="5"/>
+            <circle class="star star--tail" style="--delay:-.8s" cx="334" cy="158" r="6.5"/>
+            <circle class="star star--tail" style="--delay:-1.9s" cx="366" cy="138" r="6"/>
+          </g>
+          <g class="entry-star-labels">
+            <text x="30" y="32">Acrab</text>
+            <text x="48" y="105">Dschubba</text>
+            <text class="label--heart" x="188" y="91">Antares</text>
+            <text x="119" y="149">Alniyat</text>
+            <text x="204" y="108">Larawag</text>
+            <text x="244" y="126">Sargas</text>
+            <text x="307" y="181">Shaula</text>
+            <text x="344" y="128">Lesath</text>
+          </g>
+        </svg>
+        <p class="entry-id">109865673</p>
+        <button class="enter-button" id="enterButton" type="button">
+          <span>Entrar</span><span class="enter-button__spark" aria-hidden="true">✦</span>
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <div class="site-shell" id="siteShell" aria-hidden="true">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Inicio de Maya">
+        <span class="brand-mark">♏</span>
+        <span class="welcome-copy"><strong id="headerWelcome">Bienvenidos a mi XatSpace</strong><small id="headerWelcomeSub">música, misterio y buena vibra</small></span>
+        <svg class="header-constellation" viewBox="0 0 230 72" role="img" aria-labelledby="headerScorpioTitle">
+          <title id="headerScorpioTitle">Constelación de Escorpión</title>
+          <path d="M9 28 39 36 68 28 103 42 133 50 161 58 190 60 218 48 M39 36 29 13 M68 28 60 9" />
+          <g>
+            <circle class="star" style="--delay:-.3s" cx="9" cy="28" r="2.8"/><circle class="star" style="--delay:-1.2s" cx="29" cy="13" r="3"/>
+            <circle class="star" style="--delay:-.8s" cx="39" cy="36" r="4"/><circle class="star" style="--delay:-1.7s" cx="60" cy="9" r="2.8"/>
+            <circle class="star" style="--delay:-.5s" cx="68" cy="28" r="3.5"/><circle class="star star--heart" style="--delay:-1.4s" cx="103" cy="42" r="5"/>
+            <circle class="star" style="--delay:-.9s" cx="133" cy="50" r="3"/><circle class="star" style="--delay:-1.9s" cx="161" cy="58" r="3.5"/>
+            <circle class="star star--tail" style="--delay:-.6s" cx="190" cy="60" r="4"/><circle class="star star--tail" style="--delay:-1.5s" cx="218" cy="48" r="4"/>
+          </g>
+          <g class="header-star-labels"><text x="92" y="33">Antares</text><text x="168" y="71">Shaula</text><text x="203" y="40">Lesath</text></g>
+        </svg>
+      </a>
+      <div class="now-playing-pill" aria-live="polite">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="headerNowPlaying">Listo para sonar</span>
+      </div>
+      <button class="motion-switch" id="motionButton" type="button" aria-pressed="false">
+        <span aria-hidden="true">✦</span><span>Movimiento</span>
+      </button>
+    </header>
+
+    <main id="inicio">
+      <section class="hero-grid" aria-label="Espacio principal de Maya">
+        <article class="gallery-panel glass-panel">
+          <div class="section-kicker"><span>01</span><p>Escenas de mi universo</p></div>
+          <div class="gallery-frame">
+            <img id="galleryImage" src="assets/images/escena-01.webp" alt="" width="1280" height="853">
+          </div>
+          <div class="gallery-meta">
+            <p id="galleryLabel">Todo o nada, con la música a todo volumen</p>
+            <p class="gallery-count"><span id="galleryCurrent">01</span> / <span id="galleryTotal">07</span></p>
+          </div>
+          <div class="gallery-controls">
+            <button id="galleryPrev" type="button" aria-label="Escena anterior">←</button>
+            <div class="gallery-dots" id="galleryDots" aria-label="Elegir escena"></div>
+            <button id="galleryNext" type="button" aria-label="Escena siguiente">→</button>
+          </div>
+        </article>
+
+        <aside class="profile-panel glass-panel">
+          <div class="section-kicker"><span>02</span><p>Mi constelación</p></div>
+          <div class="profile-photo-wrap">
+            <img id="profileImage" src="assets/images/perfil-maya.webp" alt="Perfil de Maya" width="800" height="1000">
+          </div>
+          <button class="about-button" id="aboutButton" type="button">Conoce algo sobre mí <span aria-hidden="true">↗</span></button>
+          <nav class="room-links" id="roomLinks" aria-label="Salas y enlaces de xat"></nav>
+          <div class="visitor-counter" aria-live="polite">
+            <span class="counter-icon" aria-hidden="true">◉</span>
+            <span><small>Visitantes únicos</small><strong id="visitorCount">······</strong></span>
+            <span class="counter-status" id="counterStatus">Conectando</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="player-panel glass-panel" aria-label="Reproductor musical">
+        <div class="player-copy">
+          <div class="section-kicker"><span>03</span><p>Órbita musical</p></div>
+          <p class="track-number" id="trackNumber">Pista 01 · 04</p>
+          <h2 id="trackTitle">La Grange</h2>
+          <p class="track-artist" id="trackArtist">ZZ Top</p>
+          <p class="track-album" id="trackAlbum">Tres Hombres</p>
+
+          <div class="progress-wrap">
+            <span id="currentTime">0:00</span>
+            <input id="progressBar" type="range" min="0" max="1000" value="0" aria-label="Avance de la canción">
+            <span id="duration">0:00</span>
+          </div>
+
+          <div class="transport-controls">
+            <button id="prevTrack" type="button" aria-label="Canción anterior">↶</button>
+            <button class="play-button" id="playPause" type="button" aria-label="Pausar música"><span id="playIcon">Ⅱ</span></button>
+            <button id="nextTrack" type="button" aria-label="Canción siguiente">↷</button>
+          </div>
+
+          <label class="volume-control" for="volumeControl">
+            <span aria-hidden="true">♪</span>
+            <input id="volumeControl" type="range" min="0" max="100" value="72" aria-label="Volumen">
+            <span id="volumeValue">72%</span>
+          </label>
+          <p class="mix-note"><span aria-hidden="true">∞</span> Mezcla suave de 4 segundos entre canciones</p>
+        </div>
+
+        <div class="player-visual">
+          <canvas id="visualizerCanvas" aria-label="Ecualizador de constelación animado"></canvas>
+          <div class="turntable" id="turntable">
+            <div class="vinyl" id="vinyl">
+              <div class="vinyl-label">
+                <img id="albumCover" src="assets/images/cover-la-grange.webp" alt="Portada de Tres Hombres" width="480" height="480">
+              </div>
+              <span class="vinyl-hole"></span>
+            </div>
+            <div class="tonearm" aria-hidden="true">
+              <span class="tonearm-base"></span><span class="tonearm-arm"></span><span class="tonearm-needle"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Hecho con música, misterio y un poquito de magia escorpiana.</p>
+      <p>Maya · 109865673</p>
+    </footer>
+  </div>
+
+  <dialog class="about-dialog" id="aboutDialog" aria-labelledby="aboutTitle">
+    <div class="about-dialog__header">
+      <div><p>ARCHIVO PERSONAL · MAYA</p><h2 id="aboutTitle">Conoce algo sobre mí</h2></div>
+      <button id="closeAbout" type="button" aria-label="Cerrar">×</button>
+    </div>
+    <div class="about-dialog__body">
+      <div class="about-intro">
+        <img src="assets/images/portada-maya.webp" alt="Ilustración de Maya" width="1000" height="1000">
+        <p>Una mezcla poco probable de rock, historias oscuras, ternura animal y amistades que sí hacen ruido bonito.</p>
+      </div>
+      <div class="about-grid" id="aboutGrid"></div>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="cursor-orbit" id="cursorOrbit" aria-hidden="true"></div>
+  <audio id="audioDeckA" preload="auto" playsinline></audio>
+  <audio id="audioDeckB" preload="auto" playsinline></audio>
+
+  <script src="assets/app.min.js?v=maya-v2-6-20260913"></script>
+</body>
+</html>
